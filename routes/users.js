@@ -8,7 +8,7 @@ router.route('/')
   .get(async (req, res, next) => {
     try {
       const users = await User.findAll();
-      res.json(users);
+      res.render('index', { users });
     } catch (err) {
       console.error(err);
       next(err);

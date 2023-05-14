@@ -7,19 +7,9 @@ const Auth = require('./auth');
 
 //router.use('/')
 
-app.use('/', User);
-app.use('/comments', Comment);
-app.use('/page', Page);
-app.use('/auth', Auth);
-
-router.get('/', async (req, res, next) => {
-  try {
-    const users = await User.findAll();
-    res.render('sequelize', { users });
-  } catch (err) {
-    console.error(err);
-    next(err);
-  }
-});
+router.use('/', User);
+router.use('/comments', Comment);
+router.use('/page', Page);
+router.use('/auth', Auth);
 
 module.exports = router;
