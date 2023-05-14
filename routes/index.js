@@ -12,4 +12,6 @@ router.use('/comments', Comment);
 router.use('/page', Page);
 router.use('/auth', Auth);
 
+router;
+
 module.exports = router;
